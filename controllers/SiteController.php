@@ -141,5 +141,13 @@ include('views/View.php');
 			session_destroy();
 			$view->render(NULL);
 		}
+		
+		public function actionError()
+		{
+			$model = new TaskModel();
+			$view = new View();
+			$result = $model->loadAll('tasks', NULL);
+			$view->render($result);
+		}
 	}
 ?>
