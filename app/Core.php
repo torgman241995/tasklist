@@ -59,14 +59,13 @@
 					$controller = 'SiteController';
 					include('controllers/SiteController.php');
 				}
-				/**$data = new $controller();
+				$data = new $controller();
 				if (method_exists($data, $action)) {
 					(new $controller())->$action();
 				}
 				else{
 					(new SiteController())->actionError();
-				}**/
-				(new $controller())->$action();
+				}
 		}
 	}
 ?>

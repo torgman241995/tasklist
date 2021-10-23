@@ -81,10 +81,10 @@
 							if($item['status'] == 1){
 								$status = '<label class="badge bg-success">Success</label>';
 							}
-							if($item['update'] == 0){
+							if($item['updated'] == 0){
 								$update_status = NULL;
 							}
-							if($item['update'] == 1){
+							if($item['updated'] == 1){
 								$update_status = '<label class="badge bg-success">Отредактировано администратором</label>';
 							}
 						?>
