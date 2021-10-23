@@ -1,5 +1,5 @@
 <?php		
-	
+session_start();
 	class TaskModel
 	{	    
 		protected $table;
@@ -68,11 +68,12 @@
 					else{
 						$updated_status = 1;
 					}
-				
-				$query = "UPDATE $table SET username = '$name', email = '$email', text = '$text', status = '$status', updated = $updated_status WHERE id = '$id'";
+				if($_SESSION['role'] == 2){
+					$query = "UPDATE $table SET username = '$name', email = '$email', text = '$text', status = '$status', updated = $updated_status WHERE id = '$id'";
+				}
 			}
 			else{
-				$query = "INSERT INTO $table (username, email, text, status) VALUES ('$name', '$email', '$text', '0')";
+				$query = "INSERT INTO $table (username, email, text, status, updated) VALUES ('$name', '$email', '$text', '0', '0')";
 			}
 			mysqli_query($mysqli, $query);
 			return $query;

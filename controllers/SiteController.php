@@ -29,7 +29,6 @@ include('views/View.php');
 			$model = new TaskModel();
 			$view = new View();
 			
-			if($_SESSION['role'] == 2){
 				if($_POST){
 					//Обрабатываем поля и пишем в базу, если токен в рамках указанного диапазона
 					if($_POST['csrf'] && $_POST['csrf'] >= 100 && $_POST['csrf'] <= 999){
@@ -83,10 +82,6 @@ include('views/View.php');
 						$result = 0;
 					}
 				}			
-			}
-			else{
-				$result = 0;
-			}			
 			
 			$view->render($result);
 		}
