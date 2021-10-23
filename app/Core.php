@@ -28,7 +28,7 @@
 				$controller_name = $request_data[1];
 				$action_name = $request_data[2];			
 				
-				if(isset($controller_name) && !empty($controller_name) && $controller_name !== NULL){
+				if(isset($controller_name) && !empty($controller_name) && $controller_name !== NULL){					
 					$controller = ucfirst($controller_name."Controller");
 				}	
 				else{
@@ -36,6 +36,9 @@
 				}
 				
 				if(isset($action_name) && !empty($action_name) && $action_name !== NULL){
+					if(stristr($action_name, '?') !== FALSE) {
+						$action_name = stristr($action_name, '?', true);
+					}
 					$action = "action".ucfirst($action_name);
 				}	
 				else{

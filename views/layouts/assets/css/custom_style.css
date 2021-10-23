@@ -1,0 +1,34 @@
+.success{
+	height: 100px;
+	width: 100px;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+.success_title{
+	font-weight: 800; 
+}
+
+.success_box{
+	padding-top: 50px; 
+	padding-bottom: 50px; 
+}
+
+.text_black{
+	color: black;
+	font-weight: 400;
+}
+
+.text_red{
+	color: red;
+	font-weight: 800;
+}
+
+.text_green{
+	color: green;
+	font-weight: 800;
+}
+
+.login_preloader{
+	height: 250px;
+}
